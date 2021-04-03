@@ -23,19 +23,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 alight-self-center">
-                    <img src="img/logo.png" class="img-fluid" />
+                    <img src="img/logo.png" class="img-fluid" alt="Nucamp Logo" />
                 </div>
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col mr-3 col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" class="btn btn-info btn-lg text-nowrap">Reserve Campsite</a>
+                </div>
             </div>    
         </div>
+
+
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /> </a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" alt="Nucamp Logo" /> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,8 +76,13 @@
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail Thumbnail" />
+                </div>
             </div>
         </div>
 
@@ -86,6 +96,43 @@
                     <div class="media-body alight-self-center">
                         <h3>Bootstrap Outfitters</h3>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col col-sm-8 mx-auto"> <!--This is where I modified to make it look better, col-sm from 6 to 8-->
+                <div class="card">
+                    <h3 class="card-header text-white bg-info text-nowrap">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="row form-group">
+                                <label class="col-sm-6 col-form-label">Number of Campers</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" name="numCampers" id="numCampers">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
